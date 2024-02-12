@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
-
+import { Header } from './components/Header';
+import Login from './components/LoginForm';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { MovieForm } from './components/movieForm/MovieForm';
+import { RegistrationForm } from './components/RegistrationForm';
+import { MovieDetails } from './components/movieDetails/MovieDetails';
+import { Home } from './components/Home';
+import { fetchMovies } from './features/MoviesSlice';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from './app/Store';
+import { setCurrentUser } from './features/LoginSlice';
+import { getUserFromLocalStorage } from './Services/GetUser';
+import { LogOut } from './components/LogOut';
 function App() {
+  const dispatch = useDispatch<AppDispatch>();
+  
+  useEffect(() => {
+    dispatch(fetchMovies());
+    if(getUserFromLocalStorage()!==""){
+    dispatch(setCurrentUser(JSON.parse(getUserFromLocalStorage())))}
+  }, [dispatch]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header />
+        {/* <MovieForm/> */}
+        {/* <LogOut/> */}
+        <Routes>
+          <Route element={<Home/>} path='/'/>
+          <Route element={<Login />} path="/Login" />
+          <Route element={<LogOut/>} path='/Logout'/>
+          <Route element={<MovieForm/>} path='/MovieForm'/>
+          <Route element={<RegistrationForm/>} path='/Register'/>
+          <Route element={<MovieDetails/>} path='/MovieDetails/:id'/> 
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
