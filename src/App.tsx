@@ -13,6 +13,7 @@ import { AppDispatch } from './app/Store';
 import { setCurrentUser } from './features/LoginSlice';
 import { getUserFromLocalStorage } from './Services/GetUser';
 import { LogOut } from './components/LogOut';
+import HorizontalLinearStepper from './components/Stepper';
 function App() {
   const dispatch = useDispatch<AppDispatch>();
   
@@ -26,13 +27,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <MovieForm/> */}
-        {/* <LogOut/> */}
+       {/* <HorizontalLinearStepper/> */}
         <Routes>
           <Route element={<Home/>} path='/'/>
           <Route element={<Login />} path="/Login" />
           <Route element={<LogOut/>} path='/Logout'/>
-          <Route element={<MovieForm/>} path='/MovieForm'/>
+          <Route element={<MovieForm/>} path='/MovieForm/:id?'/>
           <Route element={<RegistrationForm/>} path='/Register'/>
           <Route element={<MovieDetails/>} path='/MovieDetails/:id'/> 
         </Routes>

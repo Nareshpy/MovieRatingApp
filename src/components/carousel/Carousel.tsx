@@ -16,6 +16,7 @@ import { Rating } from 'react-simple-star-rating';
 import { Box, FormControl, Select, MenuItem, SelectChangeEvent } from '@mui/material';
 import { MdOutlineEdit } from 'react-icons/md';
 import { AiOutlineDelete } from "react-icons/ai";
+import { MovieForm } from '../movieForm/MovieForm';
 export const Carousel = (props: carouselProps) => {
   const [category, setCategory] = React.useState<string>('All');
   const searchedMovie = useSelector((state: RootState) => state.movies.searchedMovie);
@@ -159,7 +160,7 @@ export const Carousel = (props: carouselProps) => {
                 </div>
               </div>
               <div className='basic-data-parent opt'>
-                <div className='movie-basic-data-opt'>
+                <div className='movie-basic-data-opt' onClick={()=>{navigate(`/MovieForm/${movie.id}`)}}>
                   <div className='moviename-opt'>
                     Edit
                   </div>
