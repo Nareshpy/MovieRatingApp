@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import Login from './components/LoginForm';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, MemoryRouter, HashRouter } from 'react-router-dom';
 import { MovieForm } from './components/movieForm/MovieForm';
 import { RegistrationForm } from './components/RegistrationForm';
 import { MovieDetails } from './components/movieDetails/MovieDetails';

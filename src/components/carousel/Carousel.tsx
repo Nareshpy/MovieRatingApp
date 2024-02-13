@@ -85,7 +85,7 @@ export const Carousel = (props: carouselProps) => {
     swipe: true,
     arrows: false,
     slidesToShow: Math.min(moviesForCarousel.length, 5),
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     infinite: true,
     rows: 1
   }

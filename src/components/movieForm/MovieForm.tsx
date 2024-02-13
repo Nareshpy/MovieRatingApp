@@ -29,14 +29,14 @@ export const MovieForm = () => {
          const date=new Date(movie.releaseDate)
          const formattedDate = `${date.getDate().toString().padStart(2, '0')}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getFullYear()}`;
          const dates=new Date(formattedDate);
-         setMovieData({id:movie.id,movieName:movie.movieName,moviePoster:movie.moviePoster,category:movie.category,releaseDate:dates});
+         setMovieData({id:movie.id,movieName:movie.movieName,moviePoster:movie.moviePoster,category:movie.category,releaseDate:new Date(movie.releaseDate)});
          console.log(movie)
       }
    },[movieData.moviePoster,movie]);
    const headers={'Content-Type': 'application/json'};
    const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;
-      setMovieData((prevData)=>({...prevData,[name]:e.target.type=="date"?new Date(value):value}))
+      setMovieData((prevData)=>({...prevData,[name]:e.target.type==="date"?new Date(value):value}))
     };
    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement> | null) => {
       if (e?.target.files && e.target.files.length > 0) {
@@ -61,7 +61,7 @@ export const MovieForm = () => {
          };
       } 
    };
-   
+   console.log(movieData)
    const addMovie=async ()=>{
    await axios.post("https://localhost:7231/api/Movie",movieData,{headers:headers}).then((response)=>{
       console.log(response);
@@ -91,7 +91,7 @@ export const MovieForm = () => {
          <div><label htmlFor="Category">Category</label></div>
          <div><input className="input-group" type="text" id="Category" name="category" onChange={(e) => handleInputChange(e)} value={movieData.category} required /></div>
          <div><label htmlFor="MoviePoster">Upload movie poster</label></div>
-         <div><input className="input-group" type="file" id="MoviePoster" name="MoviePoster" onChange={(e) => handleFileChange(e)} required/></div>
+         <div><input className="input-group" type="file" id="MoviePoster" name="MoviePoster" onChange={(e) => handleFileChange(e)}  required/></div>
          <div><button type="submit">save</button></div>
       </form>
       </dialog>
