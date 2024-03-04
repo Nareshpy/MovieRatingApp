@@ -1,3 +1,4 @@
 export interface carouselProps{
-    filterType:string
+    filterType:string,
+    showLabel:boolean
 }

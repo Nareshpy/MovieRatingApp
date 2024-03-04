@@ -47,6 +47,7 @@
     height: 100px;
     width: 720px;
     overflow: hidden;
+    padding: 7px;
 }
 .comments-input>div>p{
     margin: 4px 15px;
@@ -106,6 +107,9 @@
     gap: 20px;
     font-size: 20px;
 }
+.rating-parent div:last-child{
+    cursor: pointer;
+}
 .btn-div{
     padding-left:10px;
 }
@@ -137,4 +141,7 @@
     padding-right: 2%;
     text-align: right;
     cursor: pointer;
+  }
+  .edit-icon{
+    align-self: center;
   }

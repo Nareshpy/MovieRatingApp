@@ -1,0 +1,203 @@
+.header-main-div {
+    background-color: #121212;
+    height: 56px;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+.header-main-div>.logo {
+    text-align: center;
+    cursor:pointer;
+    width: 64px;
+    height: 32px;
+    color: white;
+    margin-left: 10px;
+}
+.header-main-div>.logo>img {
+    height: 32px;
+    width: 64px;
+}
+.header-main-div>.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 32px;
+    color: white;
+}
+.header-main-div>.menu>.menu-text {
+    text-align: center;
+    text-decoration: solid;
+    font-size: 20px;
+    line-height: 30px;
+}
+.header-main-div>.menu>.menu-icon {
+    text-align: center;
+    cursor: pointer;
+}
+.header-main-div>.search {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 32px;
+    color: white;
+}
+.header-main-div>.search>.search-bar>input {
+    width: 830px;
+    height: 24px;
+    border: none;
+}
+.header-main-div>.watchlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 130px;
+    height: 32px;
+    color: white;
+}
+.header-main-div>.watchlist>.watchlist-icon {
+    text-align: center;
+    background-color: white;
+    height: 28px;
+}
+.header-main-div>.watchlist>.watchlist-text {
+    text-align: center;
+    text-decoration: solid;
+    font-size: 15px;
+    line-height: 30px;
+}
+.header-main-div>.watchlist-icon>img {
+    height: 28px;
+    width: 20px;
+}
+.header-main-div>.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 78px;
+    height: 32px;
+    color: white;
+    cursor: pointer;
+}
+.header-main-div>.login>.login-icon {
+    margin-top: 2px;
+}
+.header-main-div>.login>a {
+    text-decoration: none;
+    color: white;
+}
+.header-main-div>.login>.login-text {
+    text-align: center;
+    text-decoration: solid;
+    font-size: 15px;
+    line-height: 30px;
+}
+.header-main-div>.login>#user-icon {
+    margin-top: 5px;
+}
+.login-text>a{
+    text-decoration: none;
+    color: white;
+}
+.login-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    border: 0px;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.5);
+}
+.login-modal>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 100px;
+    width: 420px;
+    color: white;
+    background: #000;
+    gap: 5px;
+}
+.login-modal>form>.buttons {
+    display: flex;
+    width: 408px;
+    justify-content: space-between;
+    padding: 5px 0px;
+    
+}
+.header-main-div>.languages {
+    line-height: 30px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    color: white;
+    /* border: 1px solid white; */
+}
+.languages>a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.menu-item{
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #1F1F1F;
+    color: WHITE;
+    padding: 7px 40px;
+    cursor: pointer;
+}
+.menu-item-cancel{
+    margin: 0px 0px;
+    font-size: 30px;
+    padding: 7px 15px;
+    text-align: end;
+    background: #1F1F1F;
+    color: rgb(251, 184, 13);
+    
+}
+.menu-item>a{
+    color: white;
+}
+.cancel-flyout{
+    cursor: pointer;
+}
+.search-icon {
+    position: relative;
+     right: 20px;
+     color: black;
+     top: 2px;
+     cursor: pointer;
+ }
+ .search-result-container{
+    height: 450px;
+    background-color: #121212;
+}
+.category-search{
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 7%;
+    left: 5%;
+}
+.back-icon{
+    position: relative;
+    top: 3px;
+}
+.no-results{
+    margin-top: 75px;
+    height: 50px;
+    text-decoration: underline;
+    width: 100%;
+    color: white;
+    background-color: #121212;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,6 +1,6 @@
 .carousel-item{
   cursor: pointer;
-  width: 75%;
+  width: 100%;
   max-width: 200px;
 }
 .carousel-img{
@@ -35,6 +35,7 @@
   padding-left: 10px;
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 .moviename{
   font-family: Roboto;
@@ -69,8 +70,8 @@
 .moviename-opt{
   width: auto; 
 }
-.opt{
-  background-color: #36351b;
+.opts{
+  background-color: #4a4935;
 }
 .Formcontrol .categorylabel{
   font-size: 15px;
@@ -106,4 +107,7 @@
 .slick-slide{
   max-width: 200px;
   margin-right: 10px;
+}
+.carousel-item-parent{
+  padding:0px 0px
 }

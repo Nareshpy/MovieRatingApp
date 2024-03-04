@@ -1,6 +1,8 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+
 import { initialLoginState } from "../models/InitialState";
 import { User } from "../models/User";
+
 const initialLoggedinState:initialLoginState = {
     isLoginClicked:false,
     isSignUpClicked:false,
@@ -13,6 +15,7 @@ const initialLoggedinState:initialLoginState = {
     },
     popupMessage:""
 };
+
 export const loginSlice=createSlice({
     name:"login",
     initialState:initialLoggedinState,
@@ -43,5 +46,6 @@ export const loginSlice=createSlice({
         }
     }
 })
+
 export default loginSlice.reducer;
 export const {openLogin,closeLogin,openSingnUp,closeSingnUp,setCurrentUser,setpopupMessage} = loginSlice.actions;

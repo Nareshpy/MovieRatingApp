@@ -7,11 +7,10 @@ export const PopUp = ({msg}:{msg:string}) => {
         <div className="modal-parent">
             <dialog open className="logout-modal" id="logout-modal">
                 <div className="popup-container">
-                <div className="cancelicon" ><GiCancel onClick={() => {
-                    navigate(-1);
+                <div className="cancelicon" ><GiCancel className="cancel-popup" onClick={() => {
+                window.history.length===2?navigate('/'):navigate(-1)
                 }} /></div>
-                <button onClick={() => {
-                    
+                <button onClick={() => {    
                 }}>{msg}</button>
                 </div>
             </dialog>
