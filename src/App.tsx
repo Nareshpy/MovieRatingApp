@@ -33,7 +33,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <HorizontalLinearStepper/> */}
         <Routes>
           <Route element={<Home />} path='/' />
           <Route element={<Login />} path="/Login" />
